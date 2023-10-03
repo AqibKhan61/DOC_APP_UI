@@ -11,6 +11,13 @@ class AppTextStyle{
 
   );
 
+   static TextStyle heading1withPC = const TextStyle(
+    color:  Color(0xff59615d),
+    fontSize: 25,
+    fontFamily: 'Outfit',
+
+  );
+
   static TextStyle heading2 = const TextStyle(
     color: AppColors.primary1,
     fontSize: 20,

@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:doc_app/utils/app_images.dart';
+import 'package:doc_app/routes/app_routes.dart';
 import 'package:doc_app/utils/app_textstyle.dart';
 
 class StartScreen extends GetView {
@@ -40,12 +41,23 @@ class StartScreen extends GetView {
             ),
           ),
           Container(
-            height: 525,
+            height: Get.height*0.73,
+            width: double.infinity,
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(AppImages.startscreenimage),
                 fit: BoxFit.cover,
               ),
+            ),
+            child: Padding(
+              padding:  EdgeInsets.only(top: Get.height*0.50),
+              child: TextButton(onPressed: (){
+                Get.toNamed(AppRoute.signIn);
+              },child: const Text('NEXT  >',style: TextStyle(
+                color: Colors.white,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),),),
             ),
           ),
         ],
