@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="14.884" height="24" viewBox="0 0 14.884 24">
+    <g data-name="007-stethoscope">
+        <path d="M12.492 0H9.914v1.595h1.781v3.561a4.869 4.869 0 0 1-4.864 4.864h-.373a4.869 4.869 0 0 1-4.863-4.864V1.595h1.78V0H.8a.8.8 0 0 0-.8.8v4.356a6.466 6.466 0 0 0 6.458 6.458h.372a6.466 6.466 0 0 0 6.458-6.458V.8a.8.8 0 0 0-.796-.8z" transform="translate(.452 1.143)" style="fill:#7166f9" data-name="Group"/>
+        <g data-name="Group">
+            <path data-name="Vector" d="M.8 0a.8.8 0 0 0-.8.8v2.23a.8.8 0 1 0 1.595 0V.8A.8.8 0 0 0 .8 0z" transform="translate(9.489)" style="fill:#7166f9"/>
+        </g>
+        <g data-name="Group">
+            <path data-name="Vector" d="M.8 0a.8.8 0 0 0-.8.8v2.23a.8.8 0 1 0 1.595 0V.8A.8.8 0 0 0 .8 0z" transform="translate(3.189)" style="fill:#7166f9"/>
+        </g>
+        <g data-name="Group">
+            <path data-name="Vector" d="M7.947 4.518V0H6.352v4.518H3.774a3.774 3.774 0 1 0 .026 7.548h.372a3.778 3.778 0 0 0 3.775-3.774V6.113h2.711V4.518zM6.352 8.292a2.182 2.182 0 0 1-2.179 2.179H3.8a2.179 2.179 0 1 1-.027-4.359h2.579z" transform="translate(0 11.934)" style="fill:#7166f9"/>
+        </g>
+        <g data-name="Group">
+            <path data-name="Vector" d="M2.5 0A2.5 2.5 0 1 0 5 2.5 2.5 2.5 0 0 0 2.5 0zm0 3.4a.9.9 0 1 1 .9-.9.9.9 0 0 1-.9.9z" transform="translate(9.888 14.751)" style="fill:#7166f9"/>
+        </g>
+    </g>
+</svg>

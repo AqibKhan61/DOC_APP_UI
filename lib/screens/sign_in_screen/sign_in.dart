@@ -4,8 +4,8 @@ import 'package:doc_app/utils/app_colors.dart';
 import 'package:doc_app/utils/app_images.dart';
 import 'package:doc_app/routes/app_routes.dart';
 import 'package:doc_app/utils/app_textstyle.dart';
-import 'package:doc_app/widgets/custom_bottombar.dart';
 import 'package:doc_app/widgets/custom_textfield.dart';
+import 'package:doc_app/widgets/custom_bottombarImage.dart';
 
 class SignInScreen extends GetView {
   @override
@@ -75,8 +75,8 @@ class SignInScreen extends GetView {
                           style: ButtonStyle(
                               padding: MaterialStatePropertyAll(
                                 EdgeInsets.only(
-                                  left: Get.width * 0.30,
-                                  right: Get.width * 0.38,
+                                  left: Get.width * 0.34,
+                                  right: Get.width * 0.34,
                                   top: 10,
                                   bottom: 10,
                                 ),
@@ -118,7 +118,7 @@ class SignInScreen extends GetView {
           ],
         ),
       ),
-      bottomNavigationBar: CustomBottomBar(),
+      bottomNavigationBar: CustomBottomBarImage(),
     );
   }
 }

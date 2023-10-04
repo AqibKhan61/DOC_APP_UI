@@ -1,16 +1,27 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:doc_app/utils/app_icons.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:doc_app/utils/app_colors.dart';
 import 'package:doc_app/utils/size_utils.dart';
-import 'package:doc_app/utils/app_images.dart';
+import 'package:flutter/src/widgets/framework.dart';
 
 class CustomBottomBar extends GetView {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: getVerticalSize(70),
-      decoration: BoxDecoration(
-        image: DecorationImage(
-            image: AssetImage(AppImages.bottomBarimage), fit: BoxFit.cover),
+      height: getVerticalSize(50),
+      width: double.infinity,
+      decoration: const BoxDecoration(color: AppColors.bottombarcolor),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          SvgPicture.asset(AppIcons.homeIcon),
+          SvgPicture.asset(AppIcons.phoneIcon),
+          SvgPicture.asset(AppIcons.vectorIcon),
+          SvgPicture.asset(AppIcons.dollarIcon),
+          SvgPicture.asset(AppIcons.userIcon),
+        ],
       ),
     );
   }

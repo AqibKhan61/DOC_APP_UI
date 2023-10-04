@@ -5,4 +5,7 @@ class AppImages{
   static String startscreenimage = 'assets/images/start.png';
   static String signInimage = 'assets/images/signIn.png';
   static String bottomBarimage = 'assets/images/bottombar.png';
+  static String appBarimage = 'assets/images/appbar.png';
+  static String profileImage = 'assets/images/profile.png';
+  
 }

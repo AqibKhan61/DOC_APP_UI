@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:doc_app/utils/size_utils.dart';
 import 'package:doc_app/utils/app_images.dart';
 import 'package:doc_app/routes/app_routes.dart';
 import 'package:doc_app/utils/app_textstyle.dart';
@@ -40,19 +41,20 @@ class StartScreen extends GetView {
               ],
             ),
           ),
+          SizedBox(height: getVerticalSize(70),),
           Container(
-            height: Get.height*0.73,
+            height: getVerticalSize(521),
             width: double.infinity,
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(AppImages.startscreenimage),
-                fit: BoxFit.cover,
+                fit: BoxFit.fill,
               ),
             ),
             child: Padding(
-              padding:  EdgeInsets.only(top: Get.height*0.50),
+              padding:  EdgeInsets.only(top: getVerticalSize(400)),
               child: TextButton(onPressed: (){
-                Get.toNamed(AppRoute.signIn);
+                Get.offNamed(AppRoute.signIn);
               },child: const Text('NEXT  >',style: TextStyle(
                 color: Colors.white,
                 fontSize: 20,
