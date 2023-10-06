@@ -1,6 +1,6 @@
+import 'package:flutter/material.dart';
 
-class AppIcons{
-
+class AppIcons {
   static String facebookIcon = 'assets/icons/facebook.svg';
   static String googleIcon = 'assets/icons/google.svg';
   static String appleIcon = 'assets/icons/apple.svg';
@@ -14,5 +14,9 @@ class AppIcons{
   static String vectorIcon = 'assets/icons/vector_stroke.svg';
   static String calenderIcon = 'assets/icons/calendar.svg';
   static String fiterIcon = 'assets/icons/filter.svg';
-
+  static Icon addIcon = const Icon(Icons.add);
+  static String forwardArrow = 'assets/icons/forward_arrow.svg';
+  static String patientIcon = 'assets/icons/patient.svg';
+  static String paymentIcon = 'assets/icons/payment.svg';
+  static String treatmentIcon = 'assets/icons/treatment.svg';
 }

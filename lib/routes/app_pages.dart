@@ -1,9 +1,12 @@
 import 'package:get/get.dart';
 import 'package:doc_app/routes/app_routes.dart';
+import 'package:doc_app/screens/Book_screen/book.dart';
+import 'package:doc_app/screens/sarfara_screen/sarfara.dart';
 import 'package:doc_app/screens/sign_up_screen/sign_up.dart';
 import 'package:doc_app/screens/sign_in_screen/sign_in.dart';
 import 'package:doc_app/screens/start_screen/start_screen.dart';
 import 'package:doc_app/screens/dashboard_screen/dashboard.dart';
+import 'package:doc_app/screens/patientDetail/patientDetail.dart';
 import 'package:doc_app/screens/splash_screen/splash_screen.dart';
 import 'package:doc_app/screens/appoinment_screen/appoinment.dart';
 
@@ -32,7 +35,19 @@ class AppPages extends AppRoute {
     ),
     GetPage(
       name: AppRoute.appoinment,
-      page: ()=> AppoinmentScreen(),
+      page: () => AppoinmentScreen(),
+    ),
+    GetPage(
+      name: AppRoute.book,
+      page: () => BookScreen(),
+    ),
+    GetPage(
+      name: AppRoute.sarfara,
+      page: () => SarfaraScreen(),
+    ),
+    GetPage(
+      name: AppRoute.patientDetail,
+      page: () => PatientDetailScreen(),
     ),
   ];
 }

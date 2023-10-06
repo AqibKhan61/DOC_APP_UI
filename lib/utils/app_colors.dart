@@ -14,6 +14,7 @@ class AppColors{
   static const Color normal = Color(0xff535353);
   static const Color orange = Color(0xff4ec018);
   static const Color lightpurple = Color(0xff828282);
+  static  Color tabbarColor = const Color(0xff535353).withOpacity(1.0);
 
 
   

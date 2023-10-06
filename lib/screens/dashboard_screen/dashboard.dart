@@ -1,17 +1,13 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:doc_app/utils/constant.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:doc_app/utils/app_icons.dart';
 import 'package:doc_app/utils/app_colors.dart';
 import 'package:doc_app/utils/size_utils.dart';
 import 'package:doc_app/utils/app_images.dart';
 import 'package:doc_app/routes/app_routes.dart';
 import 'package:doc_app/utils/app_textstyle.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:doc_app/widgets/custom_bottombar.dart';
-import 'package:doc_app/modals/dashboard_list_modal.dart';
-import 'package:doc_app/widgets/custom_bottombarImage.dart';
 import 'package:doc_app/widgets/custom_dashboard_doclist.dart';
 import 'package:doc_app/widgets/custom_dashboard_container.dart';
 
@@ -135,19 +131,17 @@ class DashboardScreen extends GetView {
                   ),
                   Padding(
                     padding:  EdgeInsets.only(left: getHorizontalSize(5)),
-                    child: Expanded(
-                      child: ListView.builder(
-                        padding: const EdgeInsets.all(0),
-                        shrinkWrap: true,
-                        scrollDirection: Axis.vertical,
-                          itemCount: items.length,
-                          itemBuilder: (context, index) {
-                            return CustomDoctorsList(
-                                docName: items[index].docName,
-                                docdetail: items[index].detailtext,
-                                color: items[index].starcolor);
-                          }),
-                    ),
+                    child: ListView.builder(
+                      padding: const EdgeInsets.all(0),
+                      shrinkWrap: true,
+                      scrollDirection: Axis.vertical,
+                        itemCount: items.length,
+                        itemBuilder: (context, index) {
+                          return CustomDoctorsList(
+                              docName: items[index].docName,
+                              docdetail: items[index].detailtext,
+                              color: items[index].starcolor);
+                        }),
                   )
                 ],
               ),

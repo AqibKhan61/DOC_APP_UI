@@ -57,11 +57,11 @@ class SignInScreen extends GetView {
                     child: Column(
                       children: [
                         CustomTextField(
-                            text: 'Please Enter E-mail', obscuretext: false,),
+                            isTitle: false, text: 'Please Enter E-mail', obscuretext: false,),
                         SizedBox(
                           height: Get.height * 0.01,
                         ),
-                        CustomTextField(text: 'Password', obscuretext: true),
+                        CustomTextField(isTitle: false, text: 'Password', obscuretext: true),
                         SizedBox(
                           height: Get.height * 0.01,
                         ),

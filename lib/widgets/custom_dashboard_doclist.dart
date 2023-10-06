@@ -4,7 +4,6 @@ import 'package:doc_app/utils/app_images.dart';
 import 'package:doc_app/utils/app_colors.dart';
 import 'package:doc_app/utils/size_utils.dart';
 import 'package:doc_app/utils/app_textstyle.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class CustomDoctorsList extends GetView {
   String docName;

@@ -8,4 +8,5 @@ class AppImages{
   static String appBarimage = 'assets/images/appbar.png';
   static String profileImage = 'assets/images/profile.png';
   
+  
 }

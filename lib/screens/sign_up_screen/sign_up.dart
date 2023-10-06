@@ -83,6 +83,7 @@ class SignUpScreen extends GetView<DropDownController> {
                             child: Column(
                               children: [
                                 CustomTextField(
+                                  isTitle: false,
                                   height: 40.0,
                                   text: 'Enter Full Name',
                                   obscuretext: false,
@@ -91,6 +92,7 @@ class SignUpScreen extends GetView<DropDownController> {
                                   height: Get.height * 0.01,
                                 ),
                                 CustomTextField(
+                                  isTitle: false,
                                     height: 40.0,
                                     text: 'Phone Number',
                                     obscuretext: false),
@@ -132,6 +134,7 @@ class SignUpScreen extends GetView<DropDownController> {
                                   height: Get.height * 0.01,
                                 ),
                                 CustomTextField(
+                                   isTitle: false,
                                     height: 40.0,
                                     text: 'AGE',
                                     obscuretext: false),

@@ -1,6 +1,5 @@
 import 'package:doc_app/utils/app_colors.dart';
 import 'package:doc_app/modals/dashboard_list_modal.dart';
-import 'package:doc_app/screens/sign_up_screen/sign_up.dart';
 
 
 List items = [
@@ -11,3 +10,6 @@ List items = [
 ];
 
 List<String> itemlist = ['Male', 'Female'];
+
+List<String> docdetaillist = ['Attente', 'Attente', 'Attente', 'Attente',];
+List<String> docdetaillist2 = ['Waitin', 'Waitin', 'Waitin',];
