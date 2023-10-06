@@ -6,4 +6,5 @@ abstract class AppRoute{
   static const String signIn = '/signIn';
   static const String signUp  = '/signUp';
   static const String dashboard = '/dashboard';
+  static const String appoinment = '/appoinment';
 }

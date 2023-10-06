@@ -9,3 +9,5 @@ List items = [
   listItem('Dr.Shakib khan', 'dental  .  Columbia Asia Hospital', AppColors.yellow),
   listItem('Dr.Shakib khan', 'dental  .  Columbia Asia Hospital', AppColors.yellow),
 ];
+
+List<String> itemlist = ['Male', 'Female'];

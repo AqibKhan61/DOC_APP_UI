@@ -12,6 +12,7 @@ class AppIcons{
   static String phoneIcon = 'assets/icons/phone.svg';
   static String userIcon = 'assets/icons/user.svg';
   static String vectorIcon = 'assets/icons/vector_stroke.svg';
-  static String calenderIcon = 'assets/icon/calendar.svg';
+  static String calenderIcon = 'assets/icons/calendar.svg';
+  static String fiterIcon = 'assets/icons/filter.svg';
 
 }

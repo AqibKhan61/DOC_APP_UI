@@ -1,21 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:doc_app/utils/app_colors.dart';
 
-
-class AppTextStyle{
-
+class AppTextStyle {
   static TextStyle heading1 = const TextStyle(
     color: AppColors.black,
     fontSize: 25,
     fontFamily: 'Outfit',
-
   );
 
-   static TextStyle heading1withPC = const TextStyle(
-    color:  Color(0xff59615d),
+  static TextStyle heading1withPC = const TextStyle(
+    color: Color(0xff59615d),
     fontSize: 25,
     fontFamily: 'Outfit',
-
   );
 
   static TextStyle heading2 = const TextStyle(
@@ -24,11 +20,25 @@ class AppTextStyle{
     fontFamily: 'Outfit',
     fontWeight: FontWeight.bold,
   );
-     static  TextStyle small = TextStyle(
+  static TextStyle small = TextStyle(
     color: AppColors.primary2.withOpacity(0.6),
     fontSize: 13,
     fontFamily: 'Outfit',
     fontWeight: FontWeight.bold,
-    
+  );
+
+  static TextStyle appBarText = const TextStyle(
+    color: AppColors.white,
+    fontSize: 16,
+    fontFamily: 'Outfit',
+    fontWeight: FontWeight.normal,
+  );
+
+  static TextStyle normalText = const TextStyle(
+    fontFamily: 'Outfit',
+    color: AppColors.normal,
+    fontSize: 14,
+    fontWeight: FontWeight.w600,
+    fontStyle: FontStyle.normal,
   );
 }

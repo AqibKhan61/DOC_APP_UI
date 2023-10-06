@@ -6,6 +6,7 @@ import 'package:doc_app/utils/app_icons.dart';
 import 'package:doc_app/utils/app_colors.dart';
 import 'package:doc_app/utils/size_utils.dart';
 import 'package:doc_app/utils/app_images.dart';
+import 'package:doc_app/routes/app_routes.dart';
 import 'package:doc_app/utils/app_textstyle.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:doc_app/widgets/custom_bottombar.dart';
@@ -88,10 +89,15 @@ class DashboardScreen extends GetView {
                   ),
                   Row(
                     children: [
-                      CustomDashoardContainer(
-                          color: Colors.blue,
-                          text: 'Appoinment',
-                          iconImage: AppIcons.stethoscopeIcon),
+                      InkWell(
+                        onTap: (){
+                          Get.toNamed(AppRoute.appoinment);
+                        },
+                        child: CustomDashoardContainer(
+                            color: Colors.blue,
+                            text: 'Appoinment',
+                            iconImage: AppIcons.stethoscopeIcon),
+                      ),
                       SizedBox(
                         width: getHorizontalSize(10),
                       ),

@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:doc_app/utils/constant.dart';
 import 'package:doc_app/utils/app_icons.dart';
 import 'package:doc_app/utils/size_utils.dart';
 import 'package:doc_app/utils/app_colors.dart';
@@ -28,7 +29,7 @@ class SignUpScreen extends GetView<DropDownController> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
-                      height: Get.height * 0.35,
+                      height: getVerticalSize(256),
                       width: double.infinity,
                       decoration: BoxDecoration(
                         image: DecorationImage(
@@ -135,7 +136,7 @@ class SignUpScreen extends GetView<DropDownController> {
                                     text: 'AGE',
                                     obscuretext: false),
                                 SizedBox(
-                                  height: Get.height * 0.03,
+                                  height: getVerticalSize(30),
                                 ),
                                 ElevatedButton(
                                   style: ButtonStyle(
@@ -221,4 +222,4 @@ class SignUpScreen extends GetView<DropDownController> {
   }
 }
 
-List<String> itemlist = ['Male', 'Female'];
+

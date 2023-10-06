@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:doc_app/utils/size_utils.dart';
 import 'package:doc_app/utils/app_colors.dart';
 import 'package:doc_app/utils/app_images.dart';
 import 'package:doc_app/routes/app_routes.dart';
@@ -16,7 +17,7 @@ class SignInScreen extends GetView {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              height: Get.height * 0.35,
+              height: getVerticalSize(256),
               width: double.infinity,
               decoration: BoxDecoration(
                 image: DecorationImage(
