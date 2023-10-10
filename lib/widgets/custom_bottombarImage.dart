@@ -7,7 +7,7 @@ class CustomBottomBarImage extends GetView {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: getVerticalSize(70),
+      height: getVerticalSize(72),
       decoration: BoxDecoration(
         image: DecorationImage(
             image: AssetImage(AppImages.bottomBarimage), fit: BoxFit.cover),

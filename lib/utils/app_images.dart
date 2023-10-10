@@ -7,6 +7,9 @@ class AppImages{
   static String bottomBarimage = 'assets/images/bottombar.png';
   static String appBarimage = 'assets/images/appbar.png';
   static String profileImage = 'assets/images/profile.png';
+  static String doctor1 = 'assets/images/doctor1.png';
+  static String doctor2 = 'assets/images/dotor2.png';
+  static String dashboard = 'assets/images/dashboard.png';
   
   
 }

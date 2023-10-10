@@ -2,7 +2,6 @@ import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:doc_app/utils/app_colors.dart';
 import 'package:doc_app/utils/size_utils.dart';
-import 'package:doc_app/utils/app_textstyle.dart';
 
 
 class AppointmentDetail extends GetView {
@@ -23,35 +22,70 @@ class AppointmentDetail extends GetView {
                 top: getVerticalSize(20),
                 right: getHorizontalSize(25),
                 bottom: getVerticalSize(21)),
-            child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Text('DC -',style: AppTextStyle.normalText.copyWith(color: AppColors.lightpurple),),
+            child:
+                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              const Text('DC -',
+                  style: TextStyle(
+                    fontFamily: 'OpenSans',
+                    color: Color(0xff25a870),
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                    fontStyle: FontStyle.normal,
+                  )),
               Row(
                 children: [
-                  Text(
+                  const Text(
                     'Patient',
-                    style: AppTextStyle.normalText,
+                    style: TextStyle(
+                      fontFamily: 'OpenSans',
+                      color: Color(0xff535353),
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                      fontStyle: FontStyle.normal,
+                    ),
                   ),
                   const Spacer(),
                   Container(
                     height: 25,
                     width: 66,
                     decoration: const BoxDecoration(
-                      color: AppColors.backgroungcolor,
+                      color: Color(0x26ffa300),
                     ),
                     child: Center(
-                        child: Text(
-                      text,
-                      style:
-                          AppTextStyle.normalText.copyWith(color: AppColors.orange),
-                    )),
+                        child: Text(text,
+                            style: const TextStyle(
+                              fontFamily: 'OpenSans',
+                              color: Color(0xffebab5c),
+                              fontSize: 12,
+                              fontWeight: FontWeight.w600,
+                              fontStyle: FontStyle.normal,
+                            ))),
                   )
                 ],
               ),
               Row(
                 children: [
-                  Text('Doctor',style: AppTextStyle.normalText,),
-                  SizedBox(width: getHorizontalSize(192),),
-                  Text('TYP',style: AppTextStyle.normalText.copyWith(color: AppColors.lightpurple),)
+                  const Text(
+                    'Doctor',
+                    style: TextStyle(
+                      fontFamily: 'OpenSans',
+                      color: Color(0xff535353),
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                      fontStyle: FontStyle.normal,
+                    ),
+                  ),
+                  SizedBox(
+                    width: getHorizontalSize(192),
+                  ),
+                  const Text('Typ',
+                      style: TextStyle(
+                        fontFamily: 'OpenSans',
+                        color: Color(0xff828282),
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                        fontStyle: FontStyle.normal,
+                      ))
                 ],
               ),
               const Spacer(),
@@ -62,19 +96,42 @@ class AppointmentDetail extends GetView {
                   color: AppColors.backgroungcolor,
                   borderRadius: BorderRadius.circular(7),
                 ),
-                child: Row(
+                child: const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Text('03 April,2022',style: AppTextStyle.small,),
-                    Text('Friday',style: AppTextStyle.small,),
-                    Text('7:00 PM',style: AppTextStyle.small,),
+                     Text('03 April,2022',
+                        style: TextStyle(
+                          fontFamily: 'Nexa',
+                          color: Color(0xffabb1ad),
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                          fontStyle: FontStyle.normal,
+                        )),
+                     Text('Friday',
+                        style: TextStyle(
+                          fontFamily: 'Nexa',
+                          color: Color(0xffabb1ad),
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                          fontStyle: FontStyle.normal,
+                        )),
+                    Text('7:00 PM',
+                        style: TextStyle(
+                          fontFamily: 'Nexa',
+                          color: Color(0xffabb1ad),
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                          fontStyle: FontStyle.normal,
+                        )),
                   ],
                 ),
               )
             ]),
           ),
         ),
-        SizedBox(height: getVerticalSize(20),),
+        SizedBox(
+          height: getVerticalSize(20),
+        ),
       ],
     );
   }

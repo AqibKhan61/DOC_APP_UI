@@ -15,7 +15,7 @@ class AppTextStyle {
   );
 
   static TextStyle heading2 = const TextStyle(
-    color: AppColors.primary1,
+    color: AppColors.normal,
     fontSize: 20,
     fontFamily: 'Outfit',
     fontWeight: FontWeight.bold,

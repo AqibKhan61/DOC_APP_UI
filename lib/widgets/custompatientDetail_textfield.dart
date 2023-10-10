@@ -8,7 +8,7 @@ import 'package:doc_app/utils/app_textstyle.dart';
 
 class PatientDetailTextField extends GetView{
 final String title;
-PatientDetailTextField({super.key,required this.title});
+const PatientDetailTextField({super.key,required this.title});
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -22,7 +22,7 @@ PatientDetailTextField({super.key,required this.title});
             border: OutlineInputBorder(
               
               borderRadius: BorderRadius.circular(7),
-              borderSide:  const BorderSide(color: AppColors.lightgrey,width: 0.1),
+              borderSide:   const BorderSide(color: AppColors.backgroungcolor,width: 0.1),
             ),
 
           ),

@@ -10,4 +10,6 @@ abstract class AppRoute{
   static const String book = '/Book';
   static const String sarfara = '/sarfara';
   static const String patientDetail = '/patient-Detail';
+  static const String treatment = '/treatment';
+  static const String payment = '/payment';
 }

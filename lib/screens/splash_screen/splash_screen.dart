@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:doc_app/utils/size_utils.dart';
 import 'package:doc_app/utils/app_images.dart';
 import 'package:doc_app/controllers/splash_controller.dart';
 
@@ -18,12 +19,13 @@ class SplashScreen extends GetView<SplashController>{
             image: DecorationImage(image: AssetImage(AppImages.splash1image),fit: BoxFit.cover,),
           ),
           child: Padding(
-            padding:  EdgeInsets.only(top: Get.height*0.02),
+            padding:  getPadding(top: getVerticalSize(24),left: getHorizontalSize(56),right: getHorizontalSize(56),),
             child: Column(
               children: [
                 SizedBox(
-                  height: Get.height*0.3,
-                  child: Image(image: AssetImage( AppImages.splash1_2image),)),
+                  height: getVerticalSize(211),
+                  width: getHorizontalSize(262),
+                  child: Image(image: AssetImage( AppImages.splash1_2image),fit: BoxFit.cover,)),
               ],
             ),
           ),

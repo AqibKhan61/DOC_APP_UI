@@ -14,8 +14,10 @@ import 'package:doc_app/widgets/custom_appointmendetailContainer.dart';
 class AppoinmentScreen extends GetView {
   @override
   Widget build(BuildContext context) {
+    final kSize = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: CustomAppbar(isImage: true, title: 'Appoinment', iconImage: AppIcons.fiterIcon),
+      appBar: CustomAppbar(
+          isImage: true, title: 'Appoinment', iconImage: AppIcons.fiterIcon),
       backgroundColor: AppColors.backgroungcolor,
       body: GetBuilder(
           init: AppoinmentController(),
@@ -24,7 +26,14 @@ class AppoinmentScreen extends GetView {
               child: Column(
                 children: [
                   Container(
-                    height: getVerticalSize(104),
+                    height: kSize.height == 896
+                        ? getVerticalSize(113)
+                        : kSize.height == 844
+                            ? getVerticalSize(113)
+                            : kSize.height == 851 ? getVerticalSize(113)
+                            : kSize.height == 915 ? getVerticalSize(113)
+                            : kSize.height == 914 ? getVerticalSize(113)
+                            : getVerticalSize(110),
                     width: double.infinity,
                     decoration: const BoxDecoration(
                       color: AppColors.white,
@@ -36,36 +45,46 @@ class AppoinmentScreen extends GetView {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Text(
-                                'Total Appoinments',
-                                style: AppTextStyle.normalText
-                                    .copyWith(height: 0.5),
-                              ),
-                              SizedBox(
-                                width: getHorizontalSize(170),
-                              ),
-                              Container(
-                                height: getVerticalSize(24),
-                                width: getHorizontalSize(38),
-                                decoration: const BoxDecoration(
-                                  color: AppColors.backgroungcolor,
-                                ),
-                                child: controller.index.value == 0
-                                    ? Center(
-                                        child: Text(
-                                        '1',
-                                        style: AppTextStyle.normalText,
-                                      ))
-                                    : Center(
-                                        child: Text(
-                                        '2',
-                                        style: AppTextStyle.normalText,
+                          Center(
+                            child: Padding(
+                              padding: getPadding(top: getVerticalSize(7)),
+                              child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  const Text('Total Appoinments',
+                                      style: TextStyle(
+                                        fontFamily: 'OpenSans',
+                                        color: Color(0xff535353),
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w600,
+                                        fontStyle: FontStyle.normal,
                                       )),
-                              )
-                            ],
+                                  SizedBox(
+                                    width: kSize.width == 414
+                                        ? getHorizontalSize(185)
+                                        : getHorizontalSize(170),
+                                  ),
+                                  Container(
+                                    height: getVerticalSize(24),
+                                    width: getHorizontalSize(39),
+                                    decoration: const BoxDecoration(
+                                      color: Color(0x1c14ff00),
+                                    ),
+                                    child: controller.index.value == 0
+                                        ? Center(
+                                            child: Text(
+                                            '1',
+                                            style: AppTextStyle.normalText,
+                                          ))
+                                        : Center(
+                                            child: Text(
+                                            '2',
+                                            style: AppTextStyle.normalText,
+                                          )),
+                                  )
+                                ],
+                              ),
+                            ),
                           ),
                           SizedBox(
                             height: getVerticalSize(23),
@@ -73,18 +92,20 @@ class AppoinmentScreen extends GetView {
                           Row(
                             children: [
                               CustomTabbar(
+                                  size: 0.0,
                                   widthh: controller.index.value == 0 ? 2 : 1,
                                   ontap: () {
                                     controller.changeIndextoToday();
                                   },
-                                  text: 'Todays App'),
+                                  text: 'Today\'s  App'),
                               Expanded(
                                 child: CustomTabbar(
+                                    size: 45.0,
                                     widthh: controller.index.value == 1 ? 2 : 1,
                                     ontap: () {
                                       controller.changeIndextoUppcoming();
                                     },
-                                    text: 'Uppcoming Apps'),
+                                    text: 'Uppcoming'),
                               ),
                             ],
                           ),

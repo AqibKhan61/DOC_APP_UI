@@ -19,4 +19,5 @@ class AppIcons {
   static String patientIcon = 'assets/icons/patient.svg';
   static String paymentIcon = 'assets/icons/payment.svg';
   static String treatmentIcon = 'assets/icons/treatment.svg';
+  static String welcome = 'assets/icons/welcome.svg';
 }

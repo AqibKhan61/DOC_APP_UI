@@ -9,9 +9,10 @@ class CustomDivider extends GetView{
   @override
   Widget build(BuildContext context) {
     return const SizedBox(
-      width: 60,
+      width: 56,
+      height: 1,
       child: Divider(
-        color: AppColors.black,
+        color: Color(0xff07a385),
       ),
     );
   }

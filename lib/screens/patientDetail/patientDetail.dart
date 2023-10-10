@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:doc_app/utils/size_utils.dart';
 import 'package:doc_app/utils/app_colors.dart';
+import 'package:doc_app/routes/app_routes.dart';
 import 'package:doc_app/widgets/custom_button.dart';
 import 'package:doc_app/widgets/custom_appbar.dart';
 import 'package:doc_app/widgets/custompatientDetail_textfield.dart';
@@ -42,7 +43,7 @@ class PatientDetailScreen extends GetView{
                 ),
               ),
               SizedBox(height: getVerticalSize(20),),
-              CustomButton(text: 'Save-Detail', ontap: (){}),
+              CustomButton(text: 'Save-Detail', ontap: (){Get.toNamed(AppRoute.treatment);}),
             ],
           ),
         ),
