@@ -8,7 +8,6 @@ import 'package:doc_app/widgets/custom_textfield.dart';
 import 'package:doc_app/widgets/Custom_signIn_Button.dart';
 import 'package:doc_app/widgets/custom_bottombarImage.dart';
 
-
 class SignInScreen extends GetView {
   @override
   Widget build(BuildContext context) {
@@ -34,18 +33,20 @@ class SignInScreen extends GetView {
               padding: getPadding(
                   left: getHorizontalSize(34),
                   right: getHorizontalSize(39),
-                  bottom: kSize.height == 820
-                      ? getVerticalSize(42)
-                      : kSize.height == 896
-                          ? getVerticalSize(0)
-                          : kSize.height == 844
-                              ? getVerticalSize(0)
-                              : kSize.height == 740
-                                  ? getVerticalSize(0)
-                                  : kSize.height == 915
-                                      ? getVerticalSize(10)
-                                      : kSize.height < 820 ? getVerticalSize(0)
-                                      : getVerticalSize(10)),
+                  // bottom: kSize.height == 820
+                  //     ? getVerticalSize(42)
+                  //     : kSize.height == 896
+                  //         ? getVerticalSize(0)
+                  //         : kSize.height == 844
+                  //             ? getVerticalSize(0)
+                  //             : kSize.height == 740
+                  //                 ? getVerticalSize(0)
+                  //                 : kSize.height == 915
+                  //                     ? getVerticalSize(10)
+                  //                     : kSize.height < 820
+                  //                         ? getVerticalSize(0)
+                  //                         : getVerticalSize(10)
+                  ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -150,61 +151,57 @@ class SignInScreen extends GetView {
                   //         AppTextStyle.heading2.copyWith(color: Colors.white),
                   //   ),
                   // ),
-                  Padding(
-                    padding: getPadding(
-                        top: kSize.height < 820
-                            ? getVerticalSize(40)
-                            : kSize.height == 844
-                                ? getVerticalSize(40)
-                                : kSize.height == 851
-                                    ? getVerticalSize(40)
-                                    : kSize.height == 667
-                                        ? getVerticalSize(10)
-                                        : kSize.height == 915
-                                            ? getVerticalSize(50)
-                                            : getVerticalSize(64),
-                        bottom: getVerticalSize(42)),
-                    child: Container(
-                      width: double.infinity,
-                      child: Column(
-                        children: [
-                          SignInButton(
-                              text: 'Sign in',
-                              onTap: () {
-                                Get.toNamed(AppRoute.signUp);
-                              }),
-                          SizedBox(
-                              height: kSize.height == 667
-                                  ? getVerticalSize(10)
-                                  : kSize.height < 820 ? getVerticalSize(10)
-                                  : getVerticalSize(20)),
-                          const Center(
-                            child: Text.rich(TextSpan(
-                                text: 'Dont have An Account?  ',
-                                style: TextStyle(
-                                  fontFamily: 'OpenSens',
-                                  color: Color(0xff383e47),
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w600,
-                                  fontStyle: FontStyle.normal,
-                                ),
-                                children: <InlineSpan>[
-                                  TextSpan(
-                                    text: 'Sign up',
-                                    style: TextStyle(
-                                      fontFamily: 'OpenSens',
-                                      color: Color(0xff4b9d91),
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w600,
-                                      fontStyle: FontStyle.normal,
-                                    ),
-                                  )
-                                ])),
-                          ),
-                        ],
-                      ),
-                    ),
-                  )
+                  // Padding(
+                  //   padding: getPadding(
+                  // top: kSize.height < 820
+                  //     ? getVerticalSize(40)
+                  //     : kSize.height == 844
+                  //         ? getVerticalSize(40)
+                  //         : kSize.height == 851
+                  //             ? getVerticalSize(40)
+                  //             : kSize.height == 667
+                  //                 ? getVerticalSize(10)
+                  //                 : kSize.height == 915
+                  //                     ? getVerticalSize(50)
+                  //                     :
+                  // top: getVerticalSize(64),
+                  // bottom: getVerticalSize(42)),
+                  //child:
+                  SizedBox(height: getVerticalSize(30),),
+                  SignInButton(
+                      text: 'Sign in',
+                      onTap: () {
+                        Get.toNamed(AppRoute.signUp);
+                      }),
+                  SizedBox(
+                      // height: kSize.height == 667
+                      //     ? getVerticalSize(10)
+                      //     : kSize.height < 820 ? getVerticalSize(10)
+                      //     :
+                      height: getVerticalSize(20)),
+                  const Center(
+                    child: Text.rich(TextSpan(
+                        text: 'Dont have An Account?  ',
+                        style: TextStyle(
+                          fontFamily: 'OpenSens',
+                          color: Color(0xff383e47),
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                          fontStyle: FontStyle.normal,
+                        ),
+                        children: <InlineSpan>[
+                          TextSpan(
+                            text: 'Sign up',
+                            style: TextStyle(
+                              fontFamily: 'OpenSens',
+                              color: Color(0xff4b9d91),
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              fontStyle: FontStyle.normal,
+                            ),
+                          )
+                        ])),
+                  ),
                 ],
               ),
             ),

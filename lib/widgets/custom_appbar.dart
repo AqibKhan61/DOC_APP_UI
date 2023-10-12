@@ -6,6 +6,8 @@ import 'package:doc_app/utils/app_colors.dart';
 import 'package:doc_app/utils/app_images.dart';
 import 'package:doc_app/utils/app_textstyle.dart';
 
+
+
 class CustomAppbar extends GetView implements PreferredSizeWidget {
   String title;
   String? iconImage;
@@ -14,10 +16,11 @@ class CustomAppbar extends GetView implements PreferredSizeWidget {
   CustomAppbar({super.key, required this.title, this.leading, this.iconImage, this.isImage = false});
   @override
   Widget build(BuildContext context) {
+    final kSize = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        toolbarHeight: 115,
+        toolbarHeight: kSize.height < 820 ? 115 : 119,
         leading: leading,
         actions: [
           Padding(
@@ -48,5 +51,5 @@ class CustomAppbar extends GetView implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(98);
+  Size get preferredSize => const  Size.fromHeight(75);
 }

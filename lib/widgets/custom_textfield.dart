@@ -1,3 +1,4 @@
+import 'package:doc_app/utils/size_utils.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:doc_app/utils/app_textstyle.dart';
@@ -24,11 +25,17 @@ class CustomTextField extends GetView {
         isTitle
             ? Text(
                 title!,
-                style: AppTextStyle.normalText,
+                style: const TextStyle(
+                  fontFamily: 'OpenSans',
+                  color: Color(0xff535353),
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600,
+                  fontStyle: FontStyle.normal,
+                ),
               )
             : const SizedBox(),
         SizedBox(
-          width: 300,
+          width: getHorizontalSize(300),
           height: height,
           child: TextFormField(
             obscureText: obscuretext,

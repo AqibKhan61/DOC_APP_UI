@@ -60,7 +60,7 @@ class CustomDoctorsList extends GetView {
                         Text(
                           docdetail,
                           style: AppTextStyle.small
-                              .copyWith(height: 0.3, color: const Color(0xffaaaaaa)),
+                              .copyWith(height: 0.7, color: const Color(0xffaaaaaa)),
                         ),
                         SizedBox(
                           height: getVerticalSize(14),

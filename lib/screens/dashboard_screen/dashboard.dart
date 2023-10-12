@@ -16,162 +16,163 @@ class DashboardScreen extends GetView {
     final kSize = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: AppColors.backgroungcolor,
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              height: getVerticalSize(200),
-              decoration: BoxDecoration(
-                //color: Color(0xff07a385),
-                image: DecorationImage(
-                    image: AssetImage(AppImages.dashboard), fit: BoxFit.cover),
-                borderRadius:
-                    const BorderRadius.only(bottomRight: Radius.circular(80)),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  InkWell(
-                    onTap: () {
-                      Get.toNamed(AppRoute.signUp);
-                    },
-                    child: Padding(
-                      padding: getPadding(
-                          top: getVerticalSize(67),
-                          left: kSize.width == 360
-                              ? getHorizontalSize(12)
-                              : getHorizontalSize(24)),
-                      child: const Icon(Icons.arrow_back,
-                          color: AppColors.white, size: 20),
-                    ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            height: getVerticalSize(200),
+            decoration: BoxDecoration(
+              //color: Color(0xff07a385),
+              image: DecorationImage(
+                  image: AssetImage(AppImages.dashboard), fit: BoxFit.cover),
+              borderRadius:
+                  const BorderRadius.only(bottomRight: Radius.circular(80)),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                InkWell(
+                  onTap: () {
+                    Get.offNamed(AppRoute.signUp);
+                  },
+                  child: Padding(
+                    padding: getPadding(
+                        top: getVerticalSize(67),
+                        left: kSize.width == 360
+                            ? getHorizontalSize(12)
+                            : getHorizontalSize(24)),
+                    child: const Icon(Icons.arrow_back,
+                        color: AppColors.white, size: 20),
                   ),
-                  Padding(
-                    padding: EdgeInsets.only(
-                        left: getHorizontalSize(50), top: getVerticalSize(35)),
-                    child: Row(
-                      children: [
-                        Container(
-                          height: getVerticalSize(50),
-                          width: getHorizontalSize(50),
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage(AppImages.profileImage),
-                                fit: BoxFit.scaleDown),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(
+                      left: getHorizontalSize(50), top: getVerticalSize(35)),
+                  child: Row(
+                    children: [
+                      Container(
+                        height: getVerticalSize(50),
+                        width: getHorizontalSize(50),
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage(AppImages.profileImage),
+                              fit: BoxFit.scaleDown),
+                        ),
+                      ),
+                      SizedBox(
+                        width: getHorizontalSize(10),
+                      ),
+                      const Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            'Good',
+                            style: TextStyle(
+                              fontFamily: 'OpenSans',
+                              color: Color(0x9cffffff),
+                              fontSize: 12,
+                              fontWeight: FontWeight.w600,
+                              fontStyle: FontStyle.normal,
+                            ),
                           ),
-                        ),
-                        SizedBox(
-                          width: getHorizontalSize(10),
-                        ),
-                        const Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              'Good',
+                          Text('Muhammad Bilal',
                               style: TextStyle(
                                 fontFamily: 'OpenSans',
-                                color: Color(0x9cffffff),
-                                fontSize: 12,
+                                color: AppColors.white,
+                                fontSize: 14,
                                 fontWeight: FontWeight.w600,
                                 fontStyle: FontStyle.normal,
-                              ),
-                            ),
-                            Text('Muhammad Bilal',
-                                style: TextStyle(
-                                  fontFamily: 'OpenSans',
-                                  color: AppColors.white,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w600,
-                                  fontStyle: FontStyle.normal,
-                                )),
-                          ],
-                        ),
-                      ],
-                    ),
+                              )),
+                        ],
+                      ),
+                    ],
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
-            SizedBox(
-              height: getVerticalSize(23),
+          ),
+          SizedBox(
+            height: getVerticalSize(23),
+          ),
+          Padding(
+            padding: EdgeInsets.only(
+              left: getHorizontalSize(25),
+              right: kSize.width == 360
+                  ? getHorizontalSize(15)
+                  : getHorizontalSize(24),
             ),
-            Padding(
-              padding: EdgeInsets.only(
-                left: getHorizontalSize(25),
-                right: kSize.width == 360
-                    ? getHorizontalSize(15)
-                    : getHorizontalSize(24),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text(
-                    'What do you',
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text(
+                  'What do you',
+                  style: TextStyle(
+                    fontFamily: 'OpenSans',
+                    color: Color(0xff000000),
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600,
+                    fontStyle: FontStyle.normal,
+                  ),
+                ),
+                SizedBox(
+                  height: getVerticalSize(25),
+                ),
+                Row(
+                  children: [
+                    InkWell(
+                      onTap: () {
+                        Get.toNamed(AppRoute.appoinment);
+                      },
+                      child: CustomDashoardContainer(
+                          color: const Color(0xff948bff),
+                          text: 'Appoitnment',
+                          iconImage: AppIcons.stethoscopeIcon),
+                    ),
+                    SizedBox(
+                      width: getHorizontalSize(16),
+                    ),
+                    CustomDashoardContainer(
+                        color: const Color(0xffff7854),
+                        text: 'Dental',
+                        iconImage: AppIcons.teethIcon),
+                  ],
+                ),
+                SizedBox(
+                  height: getVerticalSize(16),
+                ),
+                Row(
+                  children: [
+                    CustomDashoardContainer(
+                        color: const Color(0xfffea725),
+                        text: 'Up Coming Ap.',
+                        iconImage: AppIcons.appoinmentIcon),
+                    SizedBox(
+                      width: getHorizontalSize(16),
+                    ),
+                    CustomDashoardContainer(
+                        color: const Color(0xff68eebe),
+                        text: 'Leggers',
+                        iconImage: AppIcons.dollarIcon),
+                  ],
+                ),
+                SizedBox(
+                  height: getVerticalSize(21),
+                ),
+                const Text('Top Doctors',
                     style: TextStyle(
-                      fontFamily: 'OpenSans',
-                      color: Color(0xff000000),
-                      fontSize: 20,
+                      fontFamily: 'Manrope',
+                      color: Color(0xff25282b),
+                      fontSize: 18,
                       fontWeight: FontWeight.w600,
                       fontStyle: FontStyle.normal,
-                    ),
-                  ),
-                  SizedBox(
-                    height: getVerticalSize(25),
-                  ),
-                  Row(
-                    children: [
-                      InkWell(
-                        onTap: () {
-                          Get.toNamed(AppRoute.appoinment);
-                        },
-                        child: CustomDashoardContainer(
-                            color: const Color(0xff948bff),
-                            text: 'Appoitnment',
-                            iconImage: AppIcons.stethoscopeIcon),
-                      ),
-                      SizedBox(
-                        width: getHorizontalSize(16),
-                      ),
-                      CustomDashoardContainer(
-                          color: const Color(0xffff7854),
-                          text: 'Dental',
-                          iconImage: AppIcons.teethIcon),
-                    ],
-                  ),
-                  SizedBox(
-                    height: getVerticalSize(16),
-                  ),
-                  Row(
-                    children: [
-                      CustomDashoardContainer(
-                          color: const Color(0xfffea725),
-                          text: 'Up Coming Ap.',
-                          iconImage: AppIcons.appoinmentIcon),
-                      SizedBox(
-                        width: getHorizontalSize(16),
-                      ),
-                      CustomDashoardContainer(
-                          color: const Color(0xff68eebe),
-                          text: 'Leggers',
-                          iconImage: AppIcons.dollarIcon),
-                    ],
-                  ),
-                  SizedBox(
-                    height: getVerticalSize(21),
-                  ),
-                  const Text('Top Doctors',
-                      style: TextStyle(
-                        fontFamily: 'Manrope',
-                        color: Color(0xff25282b),
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600,
-                        fontStyle: FontStyle.normal,
-                      )),
-                  SizedBox(
-                    height: getVerticalSize(16),
-                  ),
-                  ListView.builder(
+                    )),
+                SizedBox(
+                  height: getVerticalSize(10),
+                ),
+                SizedBox(
+                  height: kSize.height < 820 ? getVerticalSize(130) : getVerticalSize(157),
+                  child: ListView.builder(
                       padding: const EdgeInsets.all(0),
                       shrinkWrap: true,
                       scrollDirection: Axis.vertical,
@@ -182,12 +183,12 @@ class DashboardScreen extends GetView {
                             docName: items[index].docName,
                             docdetail: items[index].detailtext,
                             color: items[index].starcolor);
-                      })
-                ],
-              ),
+                      }),
+                )
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
       bottomNavigationBar: CustomBottomBar(),
     );

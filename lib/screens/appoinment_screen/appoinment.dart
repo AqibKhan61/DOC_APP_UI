@@ -22,102 +22,103 @@ class AppoinmentScreen extends GetView {
       body: GetBuilder(
           init: AppoinmentController(),
           builder: (controller) {
-            return SingleChildScrollView(
-              child: Column(
-                children: [
-                  Container(
-                    height: kSize.height == 896
-                        ? getVerticalSize(113)
-                        : kSize.height == 844
-                            ? getVerticalSize(113)
-                            : kSize.height == 851 ? getVerticalSize(113)
-                            : kSize.height == 915 ? getVerticalSize(113)
-                            : kSize.height == 914 ? getVerticalSize(113)
-                            : getVerticalSize(110),
-                    width: double.infinity,
-                    decoration: const BoxDecoration(
-                      color: AppColors.white,
-                    ),
-                    child: Padding(
-                      padding: getPadding(
-                          left: getHorizontalSize(20),
-                          top: getVerticalSize(05)),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Center(
-                            child: Padding(
-                              padding: getPadding(top: getVerticalSize(7)),
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  const Text('Total Appoinments',
-                                      style: TextStyle(
-                                        fontFamily: 'OpenSans',
-                                        color: Color(0xff535353),
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w600,
-                                        fontStyle: FontStyle.normal,
-                                      )),
-                                  SizedBox(
-                                    width: kSize.width == 414
-                                        ? getHorizontalSize(185)
-                                        : getHorizontalSize(170),
+            return Column(
+              children: [
+                Container(
+                  height: kSize.height == 896
+                      ? getVerticalSize(113)
+                      : kSize.height == 844
+                          ? getVerticalSize(113)
+                          : kSize.height == 851 ? getVerticalSize(113)
+                          : kSize.height == 915 ? getVerticalSize(113)
+                          : kSize.height == 914 ? getVerticalSize(113)
+                          : getVerticalSize(110),
+                  width: double.infinity,
+                  decoration: const BoxDecoration(
+                    color: AppColors.white,
+                  ),
+                  child: Padding(
+                    padding: getPadding(
+                        left: getHorizontalSize(20),
+                        top: getVerticalSize(05)),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Center(
+                          child: Padding(
+                            padding: getPadding(top: getVerticalSize(7)),
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                const Text('Total Appoinments',
+                                    style: TextStyle(
+                                      fontFamily: 'OpenSans',
+                                      color: Color(0xff535353),
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w600,
+                                      fontStyle: FontStyle.normal,
+                                    )),
+                                SizedBox(
+                                  width: kSize.width == 414
+                                      ? getHorizontalSize(185)
+                                      : getHorizontalSize(170),
+                                ),
+                                Container(
+                                  height: getVerticalSize(24),
+                                  width: getHorizontalSize(39),
+                                  decoration: const BoxDecoration(
+                                    color: Color(0x1c14ff00),
                                   ),
-                                  Container(
-                                    height: getVerticalSize(24),
-                                    width: getHorizontalSize(39),
-                                    decoration: const BoxDecoration(
-                                      color: Color(0x1c14ff00),
-                                    ),
-                                    child: controller.index.value == 0
-                                        ? Center(
-                                            child: Text(
-                                            '1',
-                                            style: AppTextStyle.normalText,
-                                          ))
-                                        : Center(
-                                            child: Text(
-                                            '2',
-                                            style: AppTextStyle.normalText,
-                                          )),
-                                  )
-                                ],
-                              ),
+                                  child: controller.index.value == 0
+                                      ? Center(
+                                          child: Text(
+                                          '1',
+                                          style: AppTextStyle.normalText,
+                                        ))
+                                      : Center(
+                                          child: Text(
+                                          '2',
+                                          style: AppTextStyle.normalText,
+                                        )),
+                                )
+                              ],
                             ),
                           ),
-                          SizedBox(
-                            height: getVerticalSize(23),
-                          ),
-                          Row(
-                            children: [
-                              CustomTabbar(
-                                  size: 0.0,
-                                  widthh: controller.index.value == 0 ? 2 : 1,
+                        ),
+                        SizedBox(
+                          height: getVerticalSize(23),
+                        ),
+                        Row(
+                          children: [
+                            CustomTabbar(
+                                size: 0.0,
+                                widthh: controller.index.value == 0 ? 2 : 1,
+                                ontap: () {
+                                  controller.changeIndextoToday();
+                                },
+                                text: 'Today\'s  App'),
+                            Expanded(
+                              child: CustomTabbar(
+                                  size: 45.0,
+                                  widthh: controller.index.value == 1 ? 2 : 1,
                                   ontap: () {
-                                    controller.changeIndextoToday();
+                                    controller.changeIndextoUppcoming();
                                   },
-                                  text: 'Today\'s  App'),
-                              Expanded(
-                                child: CustomTabbar(
-                                    size: 45.0,
-                                    widthh: controller.index.value == 1 ? 2 : 1,
-                                    ontap: () {
-                                      controller.changeIndextoUppcoming();
-                                    },
-                                    text: 'Uppcoming'),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
+                                  text: 'Uppcoming'),
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
                   ),
-                  SizedBox(height: getVerticalSize(22)),
-                  controller.index.value == 0
-                      ? Column(
-                          children: [
-                            ListView.builder(
+                ),
+                SizedBox(height: getVerticalSize(22)),
+                controller.index.value == 0
+                    ? Column(
+                        children: [
+                          SizedBox(
+                            height: getVerticalSize(540),
+                            child: ListView.builder(
                                 padding: const EdgeInsets.all(0),
                                 shrinkWrap: true,
                                 itemCount: docdetaillist.length,
@@ -125,11 +126,14 @@ class AppoinmentScreen extends GetView {
                                   return AppointmentDetail(
                                       text: docdetaillist[index]);
                                 }),
-                          ],
-                        )
-                      : Column(
-                          children: [
-                            ListView.builder(
+                          ),
+                        ],
+                      )
+                    : Column(
+                        children: [
+                          SizedBox(
+                            height: getVerticalSize(540),
+                            child: ListView.builder(
                                 padding: const EdgeInsets.all(0),
                                 shrinkWrap: true,
                                 itemCount: docdetaillist2.length,
@@ -137,10 +141,10 @@ class AppoinmentScreen extends GetView {
                                   return AppointmentDetail(
                                       text: docdetaillist2[index]);
                                 }),
-                          ],
-                        )
-                ],
-              ),
+                          ),
+                        ],
+                      )
+              ],
             );
           }),
       floatingActionButton: FloatingActionButton(

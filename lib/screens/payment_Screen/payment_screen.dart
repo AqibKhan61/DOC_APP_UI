@@ -9,6 +9,7 @@ class PaymentScreen extends GetView {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xfff3f3f5),
       appBar: CustomAppbar(title: 'Payment'),
       body: Padding(
         padding: getPadding(

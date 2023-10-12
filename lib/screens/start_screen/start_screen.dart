@@ -1,6 +1,5 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
-import 'package:doc_app/utils/size_utils.dart';
 import 'package:doc_app/utils/app_images.dart';
 import 'package:doc_app/routes/app_routes.dart';
 import 'package:doc_app/utils/app_textstyle.dart';
@@ -10,15 +9,17 @@ import 'package:doc_app/utils/app_textstyle.dart';
 class StartScreen extends GetView {
   @override
   Widget build(BuildContext context) {
+    final kSize = MediaQuery.of(context).size;
     return Scaffold(
       body: Column(
         children: [
           Padding(
-            padding: getPadding(
-              top: getVerticalSize(60),
-              left: getHorizontalSize(41),
-              right: getHorizontalSize(65),
-            ),
+            padding: EdgeInsets.only(top: kSize.height*0.08, left: kSize.width*0.12,right: kSize.width*0.12),
+            // padding: getPadding(
+            //   top: getVerticalSize(60),
+            //   left: getHorizontalSize(41),
+            //   right: getHorizontalSize(65),
+            // ),
             child:
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               const Text('Welcome to',
@@ -54,20 +55,17 @@ class StartScreen extends GetView {
 
               // ),
               SizedBox(
-                height: getVerticalSize(18),
+                height: kSize.height*0.02,
               ),
-              Padding(
-                padding: getPadding(left: getHorizontalSize(1)),
-                child: Text(
-                  'Tell the scheduler if you need a physical exam. Mention if you have a sore back, sore throat, etc.',
-                  style: AppTextStyle.small
-                      .copyWith(color: const Color(0xffa6a6a6)),
-                ),
+              Text(
+                'Tell the scheduler if you need a physical exam. Mention if you have a sore back, sore throat, etc.',
+                style: AppTextStyle.small
+                    .copyWith(color: const Color(0xffa6a6a6)),
               ),
             ]),
           ),
           SizedBox(
-            height: getVerticalSize(70),
+            height: kSize.height*0.08,
           ),
           Expanded(
             child: Container(
@@ -80,7 +78,7 @@ class StartScreen extends GetView {
                 ),
               ),
               child: Padding(
-                padding: getPadding(bottom: getVerticalSize(50)),
+                padding: EdgeInsets.only(bottom: kSize.height*0.06),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [

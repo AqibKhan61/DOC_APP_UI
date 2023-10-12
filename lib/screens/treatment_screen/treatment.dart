@@ -18,18 +18,23 @@ class TreatmentScreen extends GetView{
     return Scaffold(
       appBar: CustomAppbar(title: 'Treatment',isImage: false,),
       backgroundColor: AppColors.backgroungcolor,
-      body: Column(
-        children: [
-          ListView.builder(
-            padding: const EdgeInsets.all(0),
-            itemCount: treatmentList.length,
-            shrinkWrap: true,
-            itemBuilder: (context, index){
-              return TreatmentList(text: treatmentList[index]);
-            }),
-            SizedBox(height: getVerticalSize(50),),
-            CustomButton(text: 'Save-Data', ontap: (){Get.toNamed(AppRoute.payment);}),
-        ],
+      body: Padding(
+        padding: getPadding(bottom: getVerticalSize(38)),
+        child: Column(
+          children: [
+            ListView.builder(
+              padding: const EdgeInsets.all(0),
+              itemCount: treatmentList.length,
+              shrinkWrap: true,
+              itemBuilder: (context, index){
+                return TreatmentList(text: treatmentList[index]);
+              }),
+              SizedBox(height: getVerticalSize(50),),
+              Expanded(child: Align(
+                alignment: Alignment.bottomCenter,
+                child: CustomButton(text: 'Save', ontap: (){Get.toNamed(AppRoute.payment);}))),
+          ],
+        ),
       ),
     );
   }

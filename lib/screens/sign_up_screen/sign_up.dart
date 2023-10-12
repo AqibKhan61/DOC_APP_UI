@@ -220,7 +220,7 @@ class SignUpScreen extends GetView<DropDownController> {
                                                 ? getVerticalSize(10)
                                                 : kSize.height == 915
                                                     ? getVerticalSize(15)
-                                                    : getVerticalSize(34)),
+                                                    : getVerticalSize(17)),
                         Padding(
                           padding: EdgeInsets.only(
                               left: kSize.width == 412
@@ -262,7 +262,7 @@ class SignUpScreen extends GetView<DropDownController> {
                                               ? getVerticalSize(5)
                                               : kSize.height == 915
                                                   ? getVerticalSize(0)
-                                                  : getVerticalSize(20),
+                                                  : getVerticalSize(8),
                         ),
                         Padding(
                           padding: getPadding(

@@ -14,12 +14,13 @@ class BookScreen extends GetView {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppbar(isImage: true, title: 'BOOK', iconImage: AppIcons.fiterIcon),
+      appBar: CustomAppbar(
+          isImage: true, title: 'BOOK', iconImage: AppIcons.fiterIcon),
       backgroundColor: AppColors.backgroungcolor,
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: getPadding(
-              left: getHorizontalSize(17), right: getHorizontalSize(17)),
+      body: Padding(
+        padding: getPadding(
+            left: getHorizontalSize(17), right: getHorizontalSize(17),bottom: getVerticalSize(25)),
+        child: SingleChildScrollView(
           child: Column(
             children: [
               SizedBox(
@@ -38,11 +39,14 @@ class BookScreen extends GetView {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        'Add',
-                        style: AppTextStyle.normalText
-                            .copyWith(color: AppColors.lightpurple),
-                      ),
+                      const Text('Add',
+                          style: TextStyle(
+                            fontFamily: 'OpenSans',
+                            color: Color(0xff07a385),
+                            fontSize: 15,
+                            fontWeight: FontWeight.w600,
+                            fontStyle: FontStyle.normal,
+                          )),
                       SizedBox(
                         height: getVerticalSize(16),
                       ),
@@ -60,8 +64,8 @@ class BookScreen extends GetView {
                         style: AppTextStyle.normalText,
                       ),
                       SizedBox(
-                        width: 300,
-                        height: 40.0,
+                        width: getHorizontalSize(300),
+                        height: 37.0,
                         child: DropdownButtonFormField(
                             decoration: InputDecoration(
                               contentPadding: const EdgeInsets.only(
@@ -89,12 +93,19 @@ class BookScreen extends GetView {
                       SizedBox(
                         height: getVerticalSize(16),
                       ),
-                      CustomTextField(isTitle: true, obscuretext: false,title: 'Date',height: 37.0),
+                      CustomTextField(
+                          isTitle: true,
+                          obscuretext: false,
+                          title: 'Date',
+                          height: 37.0),
                       SizedBox(height: getVerticalSize(16)),
-                      Text('Select',style: AppTextStyle.normalText,),
+                      Text(
+                        'Select',
+                        style: AppTextStyle.normalText,
+                      ),
                       SizedBox(
-                        width: 300,
-                        height: 40.0,
+                        width: getHorizontalSize(300),
+                        height: 37.0,
                         child: DropdownButtonFormField(
                             decoration: InputDecoration(
                               contentPadding: const EdgeInsets.only(
@@ -119,13 +130,18 @@ class BookScreen extends GetView {
                               );
                             }).toList()),
                       ),
-                      
                     ],
                   ),
                 ),
               ),
-              SizedBox(height: getVerticalSize(46),),
-              CustomButton( text: 'Submit', ontap: (){Get.toNamed(AppRoute.sarfara);}),
+              SizedBox(
+                height: getVerticalSize(46),
+              ),
+              CustomButton(
+                  text: 'Submit',
+                  ontap: () {
+                    Get.toNamed(AppRoute.sarfara);
+                  }),
             ],
           ),
         ),

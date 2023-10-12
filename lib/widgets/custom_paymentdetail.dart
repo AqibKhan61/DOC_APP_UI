@@ -5,7 +5,7 @@ import 'package:doc_app/utils/size_utils.dart';
 import 'package:doc_app/utils/app_textstyle.dart';
 
 class PaymentDetail extends GetView {
-  const PaymentDetail({super.key,required this.number});
+  const PaymentDetail({super.key, required this.number});
   final String number;
   @override
   Widget build(BuildContext context) {
@@ -35,48 +35,127 @@ class PaymentDetail extends GetView {
                   child: Center(
                       child: Text(
                     number,
-                    style: AppTextStyle.normalText,
+                    style: const TextStyle(
+                      fontFamily: 'OpenSans',
+                      color: Color(0xff07a385),
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                      fontStyle: FontStyle.normal,
+                    ),
                   )),
                 ),
                 SizedBox(height: getVerticalSize(8)),
-                Text('Thursday, 17 February',style: AppTextStyle.normalText),
+                const Text('Thursday, 17 February',
+                    style: TextStyle(
+                      fontFamily: 'OpenSans',
+                      color: Color(0xff535353),
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                      fontStyle: FontStyle.normal,
+                    )),
                 SizedBox(height: getVerticalSize(5)),
-                Row(
+                const Row(
                   children: [
-                    Text('Treat',style: AppTextStyle.normalText),
-                    const Spacer(),
-                    Text('900',style: AppTextStyle.normalText,),
+                    Text('Treat',
+                        style: TextStyle(
+                          fontFamily: 'OpenSans',
+                          color: Color(0xff535353),
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                          fontStyle: FontStyle.normal,
+                        )),
+                     Spacer(),
+                    Text(
+                      '900',
+                      style: TextStyle(
+                        fontFamily: 'OpenSans',
+                        color: Color(0xff535353),
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                        fontStyle: FontStyle.normal,
+                      ),
+                    ),
                   ],
                 ),
-                  SizedBox(height: getVerticalSize(5)),
-                Row(
+                SizedBox(height: getVerticalSize(5)),
+                const Row(
                   children: [
-                    Text('Payii',style: AppTextStyle.normalText),
-                    const Spacer(),
-                    Text('900',style: AppTextStyle.normalText,),
+                    Text('Payii',
+                        style: TextStyle(
+                          fontFamily: 'OpenSans',
+                          color: Color(0xff535353),
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                          fontStyle: FontStyle.normal,
+                        )),
+                     Spacer(),
+                    Text(
+                      '900',
+                      style: TextStyle(
+                        fontFamily: 'OpenSans',
+                        color: Color(0xff535353),
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                        fontStyle: FontStyle.normal,
+                      ),
+                    ),
                   ],
                 ),
-                  SizedBox(height: getVerticalSize(5)),
-                Row(
+                SizedBox(height: getVerticalSize(5)),
+                const Row(
                   children: [
-                    Text('Discount',style: AppTextStyle.normalText),
-                    const Spacer(),
-                    Text('800',style: AppTextStyle.normalText,),
+                    Text('Discount',
+                        style: TextStyle(
+                          fontFamily: 'OpenSans',
+                          color: Color(0xff535353),
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                          fontStyle: FontStyle.normal,
+                        )),
+                     Spacer(),
+                    Text(
+                      '800',
+                      style: TextStyle(
+                        fontFamily: 'OpenSans',
+                        color: Color(0xff535353),
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                        fontStyle: FontStyle.normal,
+                      ),
+                    ),
                   ],
                 ),
-                  SizedBox(height: getVerticalSize(5)),
-                Row(
+                SizedBox(height: getVerticalSize(5)),
+                const Row(
                   children: [
-                    Text('Previuos',style: AppTextStyle.normalText),
-                    const Spacer(),
-                    Text('700',style: AppTextStyle.normalText,),
+                    Text('Previuos',
+                        style: TextStyle(
+                          fontFamily: 'OpenSans',
+                          color: Color(0xff535353),
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                          fontStyle: FontStyle.normal,
+                        )),
+                     Spacer(),
+                    Text(
+                      '700',
+                      style: TextStyle(
+                        fontFamily: 'OpenSans',
+                        color: Color(0xff535353),
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                        fontStyle: FontStyle.normal,
+                      ),
+                    ),
                   ],
                 ),
               ],
             ),
           ),
-           ),
-           SizedBox(height: getVerticalSize(15),),
+        ),
+        SizedBox(
+          height: getVerticalSize(15),
+        ),
       ],
     );
   }
