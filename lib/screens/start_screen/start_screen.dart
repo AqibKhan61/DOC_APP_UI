@@ -1,10 +1,9 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:doc_app/utils/app_colors.dart';
 import 'package:doc_app/utils/app_images.dart';
 import 'package:doc_app/routes/app_routes.dart';
 import 'package:doc_app/utils/app_textstyle.dart';
-
-
 
 class StartScreen extends GetView {
   @override
@@ -14,7 +13,10 @@ class StartScreen extends GetView {
       body: Column(
         children: [
           Padding(
-            padding: EdgeInsets.only(top: kSize.height*0.08, left: kSize.width*0.12,right: kSize.width*0.12),
+            padding: EdgeInsets.only(
+                top: kSize.height * 0.08,
+                left: kSize.width * 0.12,
+                right: kSize.width * 0.12),
             // padding: getPadding(
             //   top: getVerticalSize(60),
             //   left: getHorizontalSize(41),
@@ -55,17 +57,17 @@ class StartScreen extends GetView {
 
               // ),
               SizedBox(
-                height: kSize.height*0.02,
+                height: kSize.height * 0.02,
               ),
               Text(
                 'Tell the scheduler if you need a physical exam. Mention if you have a sore back, sore throat, etc.',
-                style: AppTextStyle.small
-                    .copyWith(color: const Color(0xffa6a6a6)),
+                style:
+                    AppTextStyle.small.copyWith(color: const Color(0xffa6a6a6)),
               ),
             ]),
           ),
           SizedBox(
-            height: kSize.height*0.08,
+            height: kSize.height * 0.08,
           ),
           Expanded(
             child: Container(
@@ -78,23 +80,33 @@ class StartScreen extends GetView {
                 ),
               ),
               child: Padding(
-                padding: EdgeInsets.only(bottom: kSize.height*0.06),
+                padding: EdgeInsets.only(bottom: kSize.height * 0.06),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    TextButton(
-                      onPressed: () {
-                        Get.offNamed(AppRoute.signIn);
-                      },
-                      child: const Text(
-                        'NEXT  >',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        TextButton(
+                          onPressed: () {
+                            Get.offNamed(AppRoute.signIn);
+                          },
+                          child: const Text('NEXT',
+                              style: TextStyle(
+                                fontFamily: 'OpenSans',
+                                color: AppColors.white,
+                                fontSize: 22,
+                                fontWeight: FontWeight.w600,
+                                fontStyle: FontStyle.normal,
+                              )),
                         ),
-                      ),
-                    ),
+                        const Icon(
+                          Icons.arrow_forward_ios,
+                          color: Colors.white,
+                          size: 16,
+                        )
+                      ],
+                    )
                   ],
                 ),
               ),

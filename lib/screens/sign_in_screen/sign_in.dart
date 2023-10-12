@@ -31,22 +31,22 @@ class SignInScreen extends GetView {
             ),
             Padding(
               padding: getPadding(
-                  left: getHorizontalSize(34),
-                  right: getHorizontalSize(39),
-                  // bottom: kSize.height == 820
-                  //     ? getVerticalSize(42)
-                  //     : kSize.height == 896
-                  //         ? getVerticalSize(0)
-                  //         : kSize.height == 844
-                  //             ? getVerticalSize(0)
-                  //             : kSize.height == 740
-                  //                 ? getVerticalSize(0)
-                  //                 : kSize.height == 915
-                  //                     ? getVerticalSize(10)
-                  //                     : kSize.height < 820
-                  //                         ? getVerticalSize(0)
-                  //                         : getVerticalSize(10)
-                  ),
+                left: getHorizontalSize(34),
+                right: getHorizontalSize(39),
+                // bottom: kSize.height == 820
+                //     ? getVerticalSize(42)
+                //     : kSize.height == 896
+                //         ? getVerticalSize(0)
+                //         : kSize.height == 844
+                //             ? getVerticalSize(0)
+                //             : kSize.height == 740
+                //                 ? getVerticalSize(0)
+                //                 : kSize.height == 915
+                //                     ? getVerticalSize(10)
+                //                     : kSize.height < 820
+                //                         ? getVerticalSize(0)
+                //                         : getVerticalSize(10)
+              ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -76,9 +76,15 @@ class SignInScreen extends GetView {
                         ? getVerticalSize(6)
                         : getVerticalSize(12),
                   ),
-                  Text(
+                  const Text(
                     'Please Enter Your Credentials to',
-                    style: AppTextStyle.small,
+                    style: TextStyle(
+                      fontFamily: 'OpenSans',
+                      color: Color(0xffa6a6a6),
+                      fontSize: 13,
+                      fontWeight: FontWeight.w600,
+                      fontStyle: FontStyle.normal,
+                    ),
                   ),
                   SizedBox(
                     height: kSize.height < 820
@@ -167,7 +173,9 @@ class SignInScreen extends GetView {
                   // top: getVerticalSize(64),
                   // bottom: getVerticalSize(42)),
                   //child:
-                  SizedBox(height: getVerticalSize(30),),
+                  SizedBox(
+                    height: getVerticalSize(30),
+                  ),
                   SignInButton(
                       text: 'Sign in',
                       onTap: () {

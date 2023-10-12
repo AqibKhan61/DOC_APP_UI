@@ -11,8 +11,8 @@ class CustomSignupContainer extends GetView{
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: getVerticalSize(60),
-      width: getHorizontalSize(54),
+      height: (60),
+      width: (54),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(25),
         color: AppColors.white,

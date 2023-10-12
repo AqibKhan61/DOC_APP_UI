@@ -1,6 +1,6 @@
-import 'package:doc_app/utils/size_utils.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:doc_app/utils/size_utils.dart';
 import 'package:doc_app/utils/app_textstyle.dart';
 
 class CustomTextField extends GetView {
@@ -43,7 +43,7 @@ class CustomTextField extends GetView {
               filled: true,
               fillColor: const Color(0xfff3f3f3),
               contentPadding: const EdgeInsets.only(
-                left: 15,
+                left: 24,
                 right: 14,
                 bottom: 30,
               ),
@@ -52,7 +52,7 @@ class CustomTextField extends GetView {
                 fontFamily: 'OpenSans',
                 color: Color(0xff8a8a8a),
                 fontSize: 12,
-                fontWeight: FontWeight.w600,
+                fontWeight: FontWeight.w500,
                 fontStyle: FontStyle.normal,
               ),
 

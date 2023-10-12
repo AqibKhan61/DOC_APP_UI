@@ -8,7 +8,6 @@ import 'package:doc_app/routes/app_routes.dart';
 import 'package:doc_app/widgets/custom_button.dart';
 import 'package:doc_app/widgets/custom_appbar.dart';
 
-
 class SarfaraScreen extends GetView {
   @override
   Widget build(BuildContext context) {
@@ -20,8 +19,7 @@ class SarfaraScreen extends GetView {
               left: getHorizontalSize(24),
               top: getVerticalSize(24),
               right: getHorizontalSize(24),
-              bottom: getVerticalSize(50)
-              ),
+              bottom: getVerticalSize(50)),
           child: Column(
             children: [
               const Row(
@@ -146,14 +144,13 @@ class SarfaraScreen extends GetView {
                         fontWeight: FontWeight.w600,
                         fontStyle: FontStyle.normal,
                       )),
-                 const Spacer(),
+                  const Spacer(),
                   Container(
                     height: getVerticalSize(22),
                     width: getHorizontalSize(60),
-                    decoration:  BoxDecoration(
-                      color: const Color(0x26ffa300),
-                      borderRadius: BorderRadius.circular(5)
-                    ),
+                    decoration: BoxDecoration(
+                        color: const Color(0x26ffa300),
+                        borderRadius: BorderRadius.circular(5)),
                     child: const Center(
                         child: Text('Waitin',
                             style: TextStyle(
@@ -191,9 +188,12 @@ class SarfaraScreen extends GetView {
               SizedBox(
                 height: getVerticalSize(30),
               ),
-              const Divider(
-                color: AppColors.lightpurple,
-                thickness: 0.4,
+              const SizedBox(
+                width: double.infinity,
+                child: Divider(
+                  color: AppColors.lightpurple,
+                  thickness: 0.4,
+                ),
               ),
               SizedBox(
                 height: getVerticalSize(30),
@@ -204,16 +204,14 @@ class SarfaraScreen extends GetView {
                   SizedBox(
                     width: getHorizontalSize(13),
                   ),
-                  const Text(
-                    'Patient',
-                    style: TextStyle(
-                      fontFamily: 'OpenSans',
-                      color: Color(0xff000000),
-                      fontSize: 12,
-                      fontWeight: FontWeight.w600,
-                      fontStyle: FontStyle.normal,
-                    ),
-                  ),
+                  const Text('Patient',
+                      style: TextStyle(
+                        fontFamily: 'OpenSans',
+                        color: Color(0xff000000),
+                        fontSize: 12,
+                        fontWeight: FontWeight.w600,
+                        fontStyle: FontStyle.normal,
+                      )),
                   const Spacer(),
                   SvgPicture.asset(AppIcons.forwardArrow),
                 ],

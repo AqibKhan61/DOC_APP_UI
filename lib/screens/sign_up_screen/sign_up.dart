@@ -27,7 +27,7 @@ class SignUpScreen extends GetView<DropDownController> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    height: getVerticalSize(280),
+                    height: getVerticalSize(277),
                     width: double.infinity,
                     decoration: BoxDecoration(
                       image: DecorationImage(
@@ -84,9 +84,15 @@ class SignUpScreen extends GetView<DropDownController> {
                                   ? getVerticalSize(0)
                                   : getVerticalSize(12),
                         ),
-                        Text(
+                        const Text(
                           'Please Enter Your Credentials to',
-                          style: AppTextStyle.small,
+                          style: TextStyle(
+                            fontFamily: 'OpenSans',
+                            color: Color(0xffa6a6a6),
+                            fontSize: 13,
+                            fontWeight: FontWeight.w600,
+                            fontStyle: FontStyle.normal,
+                          ),
                         ),
                         SizedBox(
                           height: kSize.height < 820
@@ -126,7 +132,7 @@ class SignUpScreen extends GetView<DropDownController> {
                           child: DropdownButtonFormField(
                               decoration: InputDecoration(
                                 contentPadding: getPadding(
-                                  left: getHorizontalSize(15),
+                                  left: getHorizontalSize(24),
                                   right: getHorizontalSize(10),
                                 ),
                                 suffixIconColor: AppColors.primary2,
@@ -143,7 +149,7 @@ class SignUpScreen extends GetView<DropDownController> {
                                   fontFamily: 'OpenSans',
                                   color: Color(0xff8a8a8a),
                                   fontSize: 12,
-                                  fontWeight: FontWeight.w600,
+                                  fontWeight: FontWeight.w500,
                                   fontStyle: FontStyle.normal,
                                 ),
                               ),
@@ -163,7 +169,7 @@ class SignUpScreen extends GetView<DropDownController> {
                         CustomTextField(
                             isTitle: false,
                             height: getVerticalSize(40),
-                            text: 'AGE',
+                            text: 'Age',
                             obscuretext: false),
                         SizedBox(
                           height: kSize.height == 667
@@ -172,8 +178,9 @@ class SignUpScreen extends GetView<DropDownController> {
                                   ? getVerticalSize(15)
                                   : kSize.height == 740
                                       ? getVerticalSize(10)
-                                      : kSize.height < 820 ? getVerticalSize(20)
-                                      : getVerticalSize(30),
+                                      : kSize.height < 820
+                                          ? getVerticalSize(20)
+                                          : getVerticalSize(30),
                         ),
                         // ElevatedButton(
                         //   style: ButtonStyle(
